@@ -1,0 +1,89 @@
+{
+  "front-version": "2.19.1",
+  "version": 3,
+  "nodes": [
+    {
+      "type": "Project",
+      "id": "490c9272-b623-4620-b9fa-8e80840a8722",
+      "lastModified": "2019-01-23T13:55:28.304+09:00",
+      "name": "Slack Messenger"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "channel",
+              "value": "${\"channel name\"}"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "username",
+              "value": "${\"user name\"}"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "textBody": ""
+      },
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "secure": true,
+          "name": "https",
+          "version": "V11"
+        },
+        "host": "${\"cell url\"}${\"box name\"}",
+        "path": "/Engine/send_slack"
+      },
+      "id": "dd0f5b15-ae6e-4d30-bca9-c49f7809dce1",
+      "lastModified": "2019-01-23T13:55:28.305+09:00",
+      "name": "01 test-slack-messenger",
+      "headers": [],
+      "metaInfo": {},
+      "parentId": "490c9272-b623-4620-b9fa-8e80840a8722"
+    },
+    {
+      "type": "Context",
+      "id": "68c95c3f-ad2d-45a8-8124-0826abc5312d",
+      "lastModified": "2019-01-23T13:54:37.577+09:00",
+      "name": "test-slack-messenger",
+      "variables": [
+        {
+          "enabled": true,
+          "name": "cell url",
+          "value": "https://demo.personium.io/***/"
+        },
+        {
+          "enabled": true,
+          "name": "box name",
+          "value": "***"
+        },
+        {
+          "enabled": true,
+          "name": "channel name",
+          "value": "***"
+        },
+        {
+          "enabled": true,
+          "name": "user name",
+          "value": "***"
+        }
+      ]
+    }
+  ]
+}
